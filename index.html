@@ -1344,18 +1344,35 @@
             });
         });
 
-        // Form submission
+        // Form submission REAL (Conectado a FormSubmit)
         document.getElementById('leadForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Enviando...';
+            submitBtn.disabled = true;
+
             const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
 
-            console.log('Lead captured:', data);
-
-            alert('¡Gracias! Hemos recibido tu solicitud. Te llamaremos en las próximas 2 horas para valorar tu caso.\n\n📞 Si prefieres, también puedes llamarnos ahora al 600 000 000');
-
-            this.reset();
+            // Envío de datos a FormSubmit mediante AJAX
+            fetch("https://formsubmit.co/ajax/josanchezmor@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('¡Gracias! Hemos recibido tu solicitud. Te llamaremos en las próximas 2 horas.');
+                    this.reset();
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Hubo un error al enviar el formulario. Por favor, llámanos directamente o escríbenos por WhatsApp.');
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                });
         });
 
         // Intersection Observer for animations
@@ -1380,5 +1397,3 @@
             observer.observe(el);
         });
     </script>
-</body>
-</html>
