@@ -22,17 +22,17 @@
             --success: #2E7D32;
             --urgency: #C62828;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Raleway', sans-serif;
             color: var(--navy);
@@ -40,7 +40,7 @@
             overflow-x: hidden;
             line-height: 1.6;
         }
-        
+
         /* Sticky Contact Bar */
         .sticky-contact {
             position: fixed;
@@ -59,12 +59,17 @@
             font-size: 0.95rem;
             animation: slideDown 0.5s ease;
         }
-        
+
         @keyframes slideDown {
-            from { transform: translateY(-100%); }
-            to { transform: translateY(0); }
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
         }
-        
+
         .sticky-contact a {
             color: white;
             text-decoration: none;
@@ -73,11 +78,11 @@
             gap: 0.5rem;
             transition: opacity 0.3s;
         }
-        
-        .sticky-contact a:hover {
-            opacity: 0.8;
-        }
-        
+
+            .sticky-contact a:hover {
+                opacity: 0.8;
+            }
+
         /* Navigation */
         nav {
             position: fixed;
@@ -88,7 +93,7 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
         }
-        
+
         .nav-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -97,7 +102,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
@@ -105,30 +110,30 @@
             color: var(--navy);
             letter-spacing: 1px;
         }
-        
-        .logo .accent {
-            color: var(--gold);
-        }
-        
+
+            .logo .accent {
+                color: var(--gold);
+            }
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
             align-items: center;
         }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--navy);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-        
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--navy);
+                font-weight: 600;
+                font-size: 0.95rem;
+                transition: color 0.3s;
+            }
+
+                .nav-links a:hover {
+                    color: var(--gold);
+                }
+
         .nav-cta {
             background: var(--gold);
             color: white;
@@ -139,13 +144,13 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(201, 168, 104, 0.3);
         }
-        
-        .nav-cta:hover {
-            background: var(--bronze);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201, 168, 104, 0.4);
-        }
-        
+
+            .nav-cta:hover {
+                background: var(--bronze);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(201, 168, 104, 0.4);
+            }
+
         /* Hero Section */
         .hero {
             margin-top: 120px;
@@ -156,18 +161,18 @@
             position: relative;
             overflow: hidden;
         }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L50 50L0 100' stroke='%23C9A868' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
-            opacity: 0.3;
-        }
-        
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 100%;
+                background: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0L50 50L0 100' stroke='%23C9A868' stroke-width='0.5' fill='none' opacity='0.1'/%3E%3C/svg%3E");
+                opacity: 0.3;
+            }
+
         .hero-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -178,7 +183,7 @@
             align-items: center;
             position: relative;
         }
-        
+
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 4rem;
@@ -188,23 +193,24 @@
             color: white;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
-        
+
         @keyframes fadeInUp {
-            from { 
+            from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         .hero-content .highlight {
             color: var(--gold);
             position: relative;
         }
-        
+
         .hero-content .subtitle {
             font-size: 1.4rem;
             color: rgba(255, 255, 255, 0.9);
@@ -212,7 +218,7 @@
             line-height: 1.8;
             animation: fadeInUp 0.8s ease 0.4s both;
         }
-        
+
         .trust-badges {
             display: flex;
             gap: 2rem;
@@ -220,7 +226,7 @@
             animation: fadeInUp 0.8s ease 0.6s both;
             flex-wrap: wrap;
         }
-        
+
         .badge {
             display: flex;
             align-items: center;
@@ -229,18 +235,18 @@
             font-weight: 600;
             font-size: 0.95rem;
         }
-        
+
         .badge-icon {
             font-size: 1.5rem;
         }
-        
+
         .hero-buttons {
             display: flex;
             gap: 1.2rem;
             animation: fadeInUp 0.8s ease 0.8s both;
             flex-wrap: wrap;
         }
-        
+
         .primary-btn, .secondary-btn {
             padding: 1.2rem 2.5rem;
             border-radius: 6px;
@@ -252,30 +258,30 @@
             align-items: center;
             gap: 0.6rem;
         }
-        
+
         .primary-btn {
             background: var(--gold);
             color: white;
             box-shadow: 0 6px 25px rgba(201, 168, 104, 0.4);
         }
-        
-        .primary-btn:hover {
-            background: var(--bronze);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(201, 168, 104, 0.5);
-        }
-        
+
+            .primary-btn:hover {
+                background: var(--bronze);
+                transform: translateY(-3px);
+                box-shadow: 0 8px 30px rgba(201, 168, 104, 0.5);
+            }
+
         .secondary-btn {
             background: transparent;
             color: white;
             border: 2px solid white;
         }
-        
-        .secondary-btn:hover {
-            background: white;
-            color: var(--navy);
-        }
-        
+
+            .secondary-btn:hover {
+                background: white;
+                color: var(--navy);
+            }
+
         /* Lead Form Card */
         .hero-form {
             background: white;
@@ -285,12 +291,19 @@
             animation: fadeIn 1s ease 1s both;
             position: relative;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
-        
+
         .hero-form::before {
             content: '🔒 100% Confidencial';
             position: absolute;
@@ -304,55 +317,55 @@
             font-size: 0.85rem;
             font-weight: 700;
         }
-        
+
         .form-header {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
-        .form-header h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
-        }
-        
-        .form-header p {
-            color: var(--dark-gray);
-            font-size: 0.95rem;
-        }
-        
+
+            .form-header h3 {
+                font-family: 'Playfair Display', serif;
+                font-size: 2rem;
+                color: var(--navy);
+                margin-bottom: 0.5rem;
+            }
+
+            .form-header p {
+                color: var(--dark-gray);
+                font-size: 0.95rem;
+            }
+
         .form-group {
             margin-bottom: 1.3rem;
         }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--navy);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid var(--light-gray);
-            border-radius: 8px;
-            font-size: 1rem;
-            font-family: 'Raleway', sans-serif;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-        
+
+            .form-group label {
+                display: block;
+                margin-bottom: 0.5rem;
+                color: var(--navy);
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                padding: 1rem;
+                border: 2px solid var(--light-gray);
+                border-radius: 8px;
+                font-size: 1rem;
+                font-family: 'Raleway', sans-serif;
+                transition: border-color 0.3s;
+            }
+
+                .form-group input:focus,
+                .form-group select:focus,
+                .form-group textarea:focus {
+                    outline: none;
+                    border-color: var(--gold);
+                }
+
         .submit-btn {
             width: 100%;
             padding: 1.2rem;
@@ -366,32 +379,32 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(201, 168, 104, 0.3);
         }
-        
-        .submit-btn:hover {
-            background: var(--bronze);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(201, 168, 104, 0.4);
-        }
-        
+
+            .submit-btn:hover {
+                background: var(--bronze);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(201, 168, 104, 0.4);
+            }
+
         .privacy-note {
             text-align: center;
             font-size: 0.8rem;
             color: var(--dark-gray);
             margin-top: 1rem;
         }
-        
+
         /* Problems Section */
         .problems {
             padding: 6rem 2rem;
             background: var(--cream);
         }
-        
+
         .section-header {
             text-align: center;
             max-width: 900px;
             margin: 0 auto 4rem;
         }
-        
+
         .section-tag {
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -400,7 +413,7 @@
             font-weight: 700;
             margin-bottom: 1rem;
         }
-        
+
         .section-header h2 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
@@ -409,13 +422,13 @@
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
-        
+
         .section-header p {
             font-size: 1.2rem;
             color: var(--dark-gray);
             line-height: 1.8;
         }
-        
+
         .problems-grid {
             max-width: 1400px;
             margin: 0 auto;
@@ -423,7 +436,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
         }
-        
+
         .problem-card {
             background: white;
             border-radius: 12px;
@@ -432,51 +445,51 @@
             transition: all 0.4s ease;
             cursor: pointer;
         }
-        
-        .problem-card:hover {
-            transform: translateX(10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
+
+            .problem-card:hover {
+                transform: translateX(10px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            }
+
         .problem-icon {
             font-size: 3rem;
             margin-bottom: 1.2rem;
             display: block;
         }
-        
+
         .problem-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.7rem;
             color: var(--navy);
             margin-bottom: 1rem;
         }
-        
+
         .problem-card p {
             color: var(--dark-gray);
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
-        
+
         .problem-card ul {
             list-style: none;
             margin-bottom: 1.5rem;
         }
-        
+
         .problem-card li {
             padding-left: 1.5rem;
             position: relative;
             margin-bottom: 0.6rem;
             color: var(--dark-gray);
         }
-        
-        .problem-card li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: 700;
-        }
-        
+
+            .problem-card li::before {
+                content: '✓';
+                position: absolute;
+                left: 0;
+                color: var(--success);
+                font-weight: 700;
+            }
+
         .solution-link {
             color: var(--gold);
             font-weight: 700;
@@ -486,17 +499,17 @@
             gap: 0.5rem;
             transition: gap 0.3s;
         }
-        
-        .solution-link:hover {
-            gap: 1rem;
-        }
-        
+
+            .solution-link:hover {
+                gap: 1rem;
+            }
+
         /* How It Works */
         .how-it-works {
             padding: 6rem 2rem;
             background: white;
         }
-        
+
         .steps {
             max-width: 1200px;
             margin: 0 auto;
@@ -504,26 +517,26 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
         }
-        
+
         .step {
             text-align: center;
             position: relative;
         }
-        
-        .step::after {
-            content: '→';
-            position: absolute;
-            top: 60px;
-            right: -30px;
-            font-size: 2rem;
-            color: var(--gold);
-            opacity: 0.3;
-        }
-        
-        .step:last-child::after {
-            display: none;
-        }
-        
+
+            .step::after {
+                content: '→';
+                position: absolute;
+                top: 60px;
+                right: -30px;
+                font-size: 2rem;
+                color: var(--gold);
+                opacity: 0.3;
+            }
+
+            .step:last-child::after {
+                display: none;
+            }
+
         .step-number {
             width: 80px;
             height: 80px;
@@ -538,26 +551,26 @@
             margin: 0 auto 1.5rem;
             box-shadow: 0 10px 30px rgba(201, 168, 104, 0.3);
         }
-        
+
         .step h4 {
             font-size: 1.3rem;
             color: var(--navy);
             margin-bottom: 0.8rem;
             font-weight: 700;
         }
-        
+
         .step p {
             color: var(--dark-gray);
             line-height: 1.7;
         }
-        
+
         /* Benefits */
         .benefits {
             padding: 6rem 2rem;
             background: var(--navy);
             color: white;
         }
-        
+
         .benefits-grid {
             max-width: 1400px;
             margin: 0 auto;
@@ -566,37 +579,37 @@
             gap: 3rem;
             margin-top: 4rem;
         }
-        
+
         .benefit {
             text-align: center;
             padding: 2rem;
         }
-        
+
         .benefit-icon {
             font-size: 4rem;
             margin-bottom: 1.5rem;
             display: block;
         }
-        
+
         .benefit h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             margin-bottom: 1rem;
             color: var(--gold);
         }
-        
+
         .benefit p {
             color: rgba(255, 255, 255, 0.85);
             line-height: 1.8;
             font-size: 1.05rem;
         }
-        
+
         /* Testimonials */
         .testimonials {
             padding: 6rem 2rem;
             background: var(--cream);
         }
-        
+
         .testimonials-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -605,7 +618,7 @@
             gap: 2.5rem;
             margin-top: 4rem;
         }
-        
+
         .testimonial {
             background: white;
             padding: 2.5rem;
@@ -613,52 +626,52 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             position: relative;
         }
-        
-        .testimonial::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            font-size: 6rem;
-            color: var(--gold);
-            opacity: 0.2;
-            font-family: 'Playfair Display', serif;
-        }
-        
+
+            .testimonial::before {
+                content: '"';
+                position: absolute;
+                top: -20px;
+                left: 20px;
+                font-size: 6rem;
+                color: var(--gold);
+                opacity: 0.2;
+                font-family: 'Playfair Display', serif;
+            }
+
         .testimonial-text {
             margin-bottom: 1.5rem;
             color: var(--dark-gray);
             line-height: 1.8;
             font-style: italic;
         }
-        
+
         .testimonial-author {
             font-weight: 700;
             color: var(--navy);
         }
-        
+
         .testimonial-location {
             font-size: 0.9rem;
             color: var(--dark-gray);
         }
-        
+
         .stars {
             color: var(--gold);
             margin-bottom: 1rem;
         }
-        
+
         /* FAQ */
         .faq {
             padding: 6rem 2rem;
             background: white;
         }
-        
+
         .faq-container {
             max-width: 900px;
             margin: 0 auto;
             margin-top: 4rem;
         }
-        
+
         .faq-item {
             background: var(--cream);
             border-radius: 10px;
@@ -666,7 +679,7 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-        
+
         .faq-question {
             padding: 1.8rem 2rem;
             cursor: pointer;
@@ -677,38 +690,38 @@
             color: var(--navy);
             font-size: 1.1rem;
         }
-        
-        .faq-question:hover {
-            background: var(--light-gray);
-        }
-        
+
+            .faq-question:hover {
+                background: var(--light-gray);
+            }
+
         .faq-toggle {
             font-size: 1.5rem;
             color: var(--gold);
             transition: transform 0.3s;
         }
-        
+
         .faq-item.active .faq-toggle {
             transform: rotate(45deg);
         }
-        
+
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease, padding 0.4s ease;
             padding: 0 2rem;
         }
-        
+
         .faq-item.active .faq-answer {
             max-height: 500px;
             padding: 0 2rem 2rem;
         }
-        
+
         .faq-answer p {
             color: var(--dark-gray);
             line-height: 1.8;
         }
-        
+
         /* Final CTA */
         .final-cta {
             padding: 6rem 2rem;
@@ -717,58 +730,63 @@
             position: relative;
             overflow: hidden;
         }
-        
-        .final-cta::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(201, 168, 104, 0.1) 0%, transparent 70%);
-            animation: rotate 30s linear infinite;
-        }
-        
+
+            .final-cta::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(201, 168, 104, 0.1) 0%, transparent 70%);
+                animation: rotate 30s linear infinite;
+            }
+
         @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
         }
-        
+
         .final-cta-content {
             max-width: 800px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
-        
+
         .final-cta h2 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             color: white;
             margin-bottom: 1.5rem;
         }
-        
+
         .final-cta p {
             font-size: 1.3rem;
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2.5rem;
             line-height: 1.8;
         }
-        
+
         .cta-buttons {
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
-        
+
         /* Footer */
         footer {
             background: var(--navy);
             color: white;
             padding: 4rem 2rem 2rem;
         }
-        
+
         .footer-container {
             max-width: 1400px;
             margin: 0 auto;
@@ -777,42 +795,42 @@
             gap: 4rem;
             margin-bottom: 3rem;
         }
-        
+
         .footer-brand h3 {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
             color: var(--gold);
             margin-bottom: 1rem;
         }
-        
+
         .footer-brand p {
             color: rgba(255, 255, 255, 0.7);
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
-        
+
         .footer-contact {
             margin-top: 1.5rem;
         }
-        
-        .footer-contact p {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            margin-bottom: 0.8rem;
-            color: rgba(255, 255, 255, 0.9);
-        }
-        
+
+            .footer-contact p {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                margin-bottom: 0.8rem;
+                color: rgba(255, 255, 255, 0.9);
+            }
+
         .footer-links h4 {
             color: var(--gold);
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
         }
-        
+
         .footer-links ul {
             list-style: none;
         }
-        
+
         .footer-links a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
@@ -820,18 +838,18 @@
             margin-bottom: 0.8rem;
             transition: color 0.3s ease;
         }
-        
-        .footer-links a:hover {
-            color: var(--gold);
-        }
-        
+
+            .footer-links a:hover {
+                color: var(--gold);
+            }
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
         }
-        
+
         /* Floating WhatsApp */
         .whatsapp-float {
             position: fixed;
@@ -853,60 +871,65 @@
             text-decoration: none;
             animation: pulse-whatsapp 2s infinite;
         }
-        
+
         @keyframes pulse-whatsapp {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
         }
-        
+
         .whatsapp-float:hover {
             transform: scale(1.15);
             box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
         }
-        
+
         /* Responsive */
         @media (max-width: 1200px) {
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
+
             .hero-buttons, .trust-badges {
                 justify-content: center;
             }
-            
+
             .steps {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-            
+
             .section-header h2 {
                 font-size: 2.5rem;
             }
-            
+
             .problems-grid,
             .benefits-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .steps {
                 grid-template-columns: 1fr;
             }
-            
+
             .step::after {
                 display: none;
             }
-            
+
             .footer-container {
                 grid-template-columns: 1fr;
             }
@@ -914,14 +937,12 @@
     </style>
 </head>
 <body>
-    <!-- Sticky Contact Bar -->
     <div class="sticky-contact">
         <span>⏰ Consulta Gratuita y Sin Compromiso</span>
         <a href="tel:+34600000000">📞 600 000 000</a>
-        <a href="mailto:info@tiafege.com">✉️ info@tiafege.com</a>
+        <a href="mailto:josanchezmor@gmail.com">✉️ josanchezmor@gmail.com</a>
     </div>
 
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">TIAFEGE <span class="accent">Inversión</span></div>
@@ -935,13 +956,12 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <h1>¿Herencia <span class="highlight">Bloqueada</span>? Te Pagamos HOY</h1>
                 <p class="subtitle">Compramos tus derechos hereditarios antes de la aceptación. Resolvemos proindivisos, herencias conflictivas e inmuebles ocupados. Dinero en tu cuenta en 48h.</p>
-                
+
                 <div class="trust-badges">
                     <div class="badge">
                         <span class="badge-icon">✓</span>
@@ -956,13 +976,13 @@
                         <span>Sin Comisiones</span>
                     </div>
                 </div>
-                
+
                 <div class="hero-buttons">
                     <a href="#contacto" class="primary-btn">💰 Quiero mi dinero ahora</a>
                     <a href="#como-funciona" class="secondary-btn">📋 Cómo funciona</a>
                 </div>
             </div>
-            
+
             <div class="hero-form" id="contacto">
                 <div class="form-header">
                     <h3>Valoración Gratuita</h3>
@@ -1007,7 +1027,6 @@
         </div>
     </section>
 
-    <!-- Problems Section -->
     <section class="problems" id="servicios">
         <div class="section-header">
             <div class="section-tag">Soluciones</div>
@@ -1027,7 +1046,7 @@
                 </ul>
                 <a href="#contacto" class="solution-link">Quiero vender mis derechos →</a>
             </div>
-            
+
             <div class="problem-card">
                 <span class="problem-icon">⚖️</span>
                 <h3>Herencias Conflictivas</h3>
@@ -1040,7 +1059,7 @@
                 </ul>
                 <a href="#contacto" class="solution-link">Resolver mi caso →</a>
             </div>
-            
+
             <div class="problem-card">
                 <span class="problem-icon">🏘️</span>
                 <h3>Proindivisos Bloqueados</h3>
@@ -1053,7 +1072,7 @@
                 </ul>
                 <a href="#contacto" class="solution-link">Vender mi parte →</a>
             </div>
-            
+
             <div class="problem-card">
                 <span class="problem-icon">🏠</span>
                 <h3>Inmuebles Ocupados</h3>
@@ -1069,7 +1088,6 @@
         </div>
     </section>
 
-    <!-- How It Works -->
     <section class="how-it-works" id="como-funciona">
         <div class="section-header">
             <div class="section-tag">Proceso</div>
@@ -1100,7 +1118,6 @@
         </div>
     </section>
 
-    <!-- Benefits -->
     <section class="benefits">
         <div class="section-header">
             <div class="section-tag" style="color: var(--gold);">Ventajas</div>
@@ -1140,7 +1157,6 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="testimonials" id="testimonios">
         <div class="section-header">
             <div class="section-tag">Testimonios</div>
@@ -1168,7 +1184,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="section-header">
             <div class="section-tag">Preguntas Frecuentes</div>
@@ -1184,7 +1199,7 @@
                     <p>Sí, es completamente legal. El artículo 1.531 del Código Civil español regula expresamente la venta de derechos hereditarios. Se hace mediante escritura pública ante notario y es una práctica habitual en el sector.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     ¿Cuánto tardo en recibir el dinero?
@@ -1194,7 +1209,7 @@
                     <p>Una vez firmado el contrato ante notario, el dinero se transfiere en 48-72 horas hábiles. En casos urgentes podemos acelerar el proceso incluso más.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     ¿Necesito el consentimiento de los demás herederos?
@@ -1204,7 +1219,7 @@
                     <p>No. Puedes vender tus derechos hereditarios sin necesidad de autorización de los otros coherederos. Es tu derecho individual.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     ¿Qué documentación necesito?
@@ -1214,7 +1229,7 @@
                     <p>Básicamente: certificado de defunción, testamento o declaración de herederos, y tu DNI. Si no tienes toda la documentación, te ayudamos a conseguirla.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     ¿Qué pasa con los impuestos de la herencia?
@@ -1224,7 +1239,7 @@
                     <p>Cuando nos vendes tus derechos, nosotros asumimos la obligación de pago del impuesto de sucesiones. Tú quedas liberado de esa responsabilidad.</p>
                 </div>
             </div>
-            
+
             <div class="faq-item">
                 <div class="faq-question">
                     ¿Cuánto pagan por mis derechos hereditarios?
@@ -1237,7 +1252,6 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta">
         <div class="final-cta-content">
             <h2>¿Listo para resolver tu herencia HOY?</h2>
@@ -1249,7 +1263,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
@@ -1257,7 +1270,7 @@
                 <p>Especialistas en soluciones rápidas para herencias complicadas. Compramos derechos hereditarios, resolvemos proindivisos e inmuebles ocupados.</p>
                 <div class="footer-contact">
                     <p>📞 +34 600 000 000</p>
-                    <p>✉️ info@tiafege.com</p>
+                    <p>✉️ josanchezmor@gmail.com</p>
                     <p>📍 Barcelona, España</p>
                 </div>
             </div>
@@ -1294,7 +1307,6 @@
         </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
     <a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
         💬
     </a>
@@ -1321,11 +1333,11 @@
             question.addEventListener('click', () => {
                 const faqItem = question.parentElement;
                 const wasActive = faqItem.classList.contains('active');
-                
+
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                 });
-                
+
                 if (!wasActive) {
                     faqItem.classList.add('active');
                 }
@@ -1333,16 +1345,16 @@
         });
 
         // Form submission
-        document.getElementById('leadForm').addEventListener('submit', function(e) {
+        document.getElementById('leadForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const formData = new FormData(this);
             const data = Object.fromEntries(formData);
-            
+
             console.log('Lead captured:', data);
-            
+
             alert('¡Gracias! Hemos recibido tu solicitud. Te llamaremos en las próximas 2 horas para valorar tu caso.\n\n📞 Si prefieres, también puedes llamarnos ahora al 600 000 000');
-            
+
             this.reset();
         });
 
